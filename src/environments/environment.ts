@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  "login": "https://localhost:7000/auth/login",
+  "sendOTP": "https://localhost:7000/auth/sendOTP",
+  "validateOTP": "https://localhost:7000/auth/validateOTP",
+  "register": "https://localhost:7000/auth/register",
 };
 
 /*

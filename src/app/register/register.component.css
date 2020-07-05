@@ -1,0 +1,31 @@
+.RegisterComponent{
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  margin-top: 5%;
+}
+.CardHeader{
+  text-align: center;
+}
+.CardTitle{
+  font-weight: bold;
+  font-size: 20px;
+}
+.CardFormField{
+  width: 100%;
+}
+.ButtonGroup{
+  text-align: center;
+}
+.ButtonGroup button{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.CardFooter{
+  text-align: center;
+}
+.CardFooterText{
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+}

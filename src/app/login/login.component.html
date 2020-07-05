@@ -1,13 +1,31 @@
-<div>
-  <div>
-    <div class="titleComponent" >
-      <p class="title" >Buddy</p>
-    </div>
-    <div>
-      <input name="userid" />
-    </div>
-    <div>
-      <input type="password" name="password"/>
-    </div>
+<!-- Login with Phone and Password -->
+<mat-card class="CardComponent" >
+  <div class="CardHeader" >
+    <p class="CardTitle" >Buddy</p>
+    <hr>
   </div>
-</div>
+  <mat-card-content class="CardContent" >
+    <mat-form-field class="CardFormField" appearance="standard">
+      <mat-label>Mobile Number</mat-label>
+      <input matInput type="text" [(ngModel)]="phone" maxLength="10" (change)="formValidator()" required >
+    </mat-form-field>
+    <mat-form-field class="OTPCardFormField" *ngIf="isPhoneValidated" appearance="standard">
+      <mat-label>OTP</mat-label>
+      <input matInput type="text" [(ngModel)]="oneTimePassword" maxlength="6" (change)="formValidator()" required >
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions class="ButtonGroup" >
+    <span *ngIf="isOTPValidated;then condition2 else condition1" ></span>
+    <ng-template #condition1 >
+      <button type="button" mat-raised-button color="primary" [disabled]=!isPhoneValidationValid (click)="sendOTP()" >Send OTP</button>
+    </ng-template>
+    <ng-template #condition2 >
+      <button type="button" mat-raised-button color="primary" [disabled]=!isOTPValidationValid (click)="login()" >Login</button>
+    </ng-template>
+    <button type="button" mat-raised-button color="secondary" (click)="register()" >Register</button>
+  </mat-card-actions>
+  <mat-card-footer class="CardFooter" >
+    <small class="CardFooterText" >*OTP will be send to registered email address</small>
+  </mat-card-footer>
+</mat-card>
+

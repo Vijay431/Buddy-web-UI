@@ -1,0 +1,37 @@
+.CardComponent{
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  overflow: hidden;
+  margin-top: 5%;
+}
+.CardHeader{
+  width: 100%;
+  padding: 5px;
+}
+.CardTitle{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.CardFormField, .OTPCardFormField{
+  width: 100%;
+}
+.ButtonGroup{
+  text-align: center;
+}
+.ButtonGroup button{
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  font-weight: bold;
+}
+.CardFooter{
+  text-align: center;
+  padding: 5px;
+  padding-top: -10px;
+}
+.CardFooterText{
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+}
