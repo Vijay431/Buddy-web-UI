@@ -20,10 +20,10 @@
   <mat-card-actions class="ButtonGroup" >
     <span *ngIf="OTPFlag; then condition2 else condition1" ></span>
     <ng-template #condition1>
-      <button mat-raised-button color="primary" [disabled]=!isOTPValidated  (click)="sendOTP()" >Send OTP</button>
+      <button mat-raised-button color="primary" [disabled]=!isDetailsValidated (click)="sendOTP()" >Send OTP</button>
     </ng-template>
     <ng-template #condition2>
-      <button mat-raised-button color="primary" [disabled]=!isDetailsValidated  (click)="register()" >Register</button>
+      <button mat-raised-button color="primary" [disabled]=!isOTPValidated (click)="register()" >Register</button>
     </ng-template>
     <button mat-raised-button color="secondary" (click)="redirectToLogin()" >Cancel</button>
   </mat-card-actions>
